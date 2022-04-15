@@ -2,13 +2,22 @@
 
 namespace Alura\Calisthenics\Domain\Video;
 
+use PhpParser\Node\Expr\Cast\Bool_;
+
 class Video
 {
-    public const PUBLIC = 1;
-    public const PRIVATE = 2;
-
-    private int $visibility = self::PRIVATE;
+    private bool $visible = false;
     private int $ageLimit;
+
+    public function publish(): void
+    {
+        $this->visible = true;
+    }
+
+    public function isPublic(): bool
+    {
+        return $this->visible;
+    }
 
     public function getVisibility(): int
     {

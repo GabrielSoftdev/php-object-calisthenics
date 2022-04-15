@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '65c26cb94758bb83be5c8f9c1b6654afaf9ac52c',
+        'reference' => '7a96a0885fb1445859c2078b1673ea2bc2eb998a',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '65c26cb94758bb83be5c8f9c1b6654afaf9ac52c',
+            'reference' => '7a96a0885fb1445859c2078b1673ea2bc2eb998a',
             'dev_requirement' => false,
         ),
         'doctrine/instantiator' => array(
@@ -62,6 +62,15 @@
             'install_path' => __DIR__ . '/../phar-io/version',
             'aliases' => array(),
             'reference' => '4f7fd7836c6f332bb2933569e566a0d6c4cbed74',
+            'dev_requirement' => false,
+        ),
+        'php-ds/php-ds' => array(
+            'pretty_version' => 'v1.4.1',
+            'version' => '1.4.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-ds/php-ds',
+            'aliases' => array(),
+            'reference' => '43d2df301a9e2017f67b8c11d94a5222f9c00fd1',
             'dev_requirement' => false,
         ),
         'phpdocumentor/reflection-common' => array(

@@ -32,11 +32,13 @@ class ComposerStaticInit272bb8612cb7aa897344d1baa7ad88f5
         ),
         'D' => 
         array (
+            'Ds\\' => 3,
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
         ),
         'A' => 
         array (
+            'Alura\\Calisthenics\\Tests\\Unit\\Domain\\Video\\' => 43,
             'Alura\\Calisthenics\\Tests\\' => 25,
             'Alura\\Calisthenics\\' => 19,
         ),
@@ -46,8 +48,8 @@ class ComposerStaticInit272bb8612cb7aa897344d1baa7ad88f5
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -65,6 +67,10 @@ class ComposerStaticInit272bb8612cb7aa897344d1baa7ad88f5
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Ds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-ds/php-ds/src',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -72,6 +78,10 @@ class ComposerStaticInit272bb8612cb7aa897344d1baa7ad88f5
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'Alura\\Calisthenics\\Tests\\Unit\\Domain\\Video\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests/Unit/Domain/Video',
         ),
         'Alura\\Calisthenics\\Tests\\' => 
         array (

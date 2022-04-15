@@ -9,7 +9,7 @@ use Ds\Map;
 class Student
 {
     private string $email;
-    private DateTimeInterface $bd;
+    private DateTimeInterface $birth;
     private Map $watchedVideos;
     private string $fName;
     private string $lName;
@@ -20,11 +20,11 @@ class Student
     public string $state;
     public string $country;
 
-    public function __construct(string $email, DateTimeInterface $bd, string $fName, string $lName, string $street, string $number, string $province, string $city, string $state, string $country)
+    public function __construct(string $email, DateTimeInterface $birth, string $fName, string $lName, string $street, string $number, string $province, string $city, string $state, string $country)
     {
         $this->watchedVideos = new Map();
         $this->setEmail($email);
-        $this->bd = $bd;
+        $this->birth = $birth;
         $this->fName = $fName;
         $this->lName = $lName;
         $this->street = $street;
@@ -66,19 +66,13 @@ class Student
 
     public function hasAccess(): bool
     {
-        if ($this->watchedVideos->count() > 0) {
-            $this->watchedVideos->sort(fn (DateTimeInterface $dateA, DateTimeInterface $dateB) => $dateA <=> $dateB);
-            /** @var DateTimeInterface $firstDate */
-            $firstDate = $this->watchedVideos->first()->value;
-            $today = new \DateTimeImmutable();
-
-            if ($firstDate->diff($today)->days >= 90) {
-                return false;
-            } else {
-                return true;
-            }
-        } else {
+        if ($this->watchedVideos->count() === 0)
             return true;
-        }
+             
+        $this->watchedVideos->sort(fn (DateTimeInterface $dateA, DateTimeInterface $dateB) => $dateA <=> $dateB);
+        $firstDate = $this->watchedVideos->first()->value;
+        $today = new \DateTimeImmutable();
+
+        return $firstDate->diff($today)->days < 90;
     }
 }

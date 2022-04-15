@@ -33,7 +33,7 @@ class StudentTest extends TestCase
 
     public function testStudentWithFirstWatchedVideoInLessThan90DaysHasAccess()
     {
-        $date = new \DateTimeImmutable('89 days');
+        $date = new \DateTimeImmutable('-89 days');
         $this->student->watch(new Video(), $date);
 
         self::assertTrue($this->student->hasAccess());
