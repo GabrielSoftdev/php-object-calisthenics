@@ -10,7 +10,6 @@
         }
     },
     "require": {
-        "ext-ds": "*",
         "phpunit/phpunit": "^9"
     }
 }
